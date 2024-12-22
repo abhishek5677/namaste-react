@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste react</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="root">
+        <!-- all the code inside the root will be replaced because for react root element is this div i.e, id = root -->
+    </div>
+
+    <!-- this is for react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- this is for react dom -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="./app.js"></script>
+
+
+
+    <!-- adding element using react -->
+    <!-- <script>
+
+        // takes 3 values as input
+        const heading = React.createElement("h1", {}, "Hello world from react!");
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        root.render(heading);
+
+    </script> -->
+
+
+    <!-- traditional way of adding an element in html using vanilla js -->
+    <!-- <script>
+
+        const heading = document.createElement('h1')
+        heading.innerHTML = "Hello world from javascript!"
+
+        const root = document.querySelector("#root");
+        root.appendChild(heading)
+
+    </script> -->
+
+</body>
+
+</html>
