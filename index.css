@@ -1,3 +1,52 @@
-#heading {
-    color: red;
+.app {
+    padding: 10px 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border: 1px solid #ccc;
+    /* align-items: center; */
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.nav-items ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav-items ul li {
+    font-size: 20px;
+}
+
+.body-container .search {
+    padding: 20px 0;
+}
+
+.resto-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.resto-container .res-card {
+    height: 100%;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resto-container .res-card img {
+    width: 100%;
+    height: 200px;
 }
