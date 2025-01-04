@@ -1,6 +1,14 @@
+import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constant";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
+
+    const [loginUser, setLoginUSer] = useState('login')
+    const onlineStatus = useOnlineStatus();
+    console.log(onlineStatus);
+
     return (
         <div className='header'>
             <div className='logo-container'>
@@ -8,10 +16,36 @@ const Header = () => {
             </div>
             <div className='nav-items'>
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
+                    <li>
+                        Online status: {onlineStatus ? 'online ✅' : 'offline ❌'}
+                    </li>
+                    <li>
+                        <Link to={'/'} >
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/about'} >
+                            About Us
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/contact'} >
+                            Contact Us
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/Grocery'} >
+                            Grocery
+                        </Link>
+                    </li>
                     <li>Cart</li>
+                    <button
+                        className="login-btn"
+                        onClick={() => loginUser === 'login' ? setLoginUSer('logout') : setLoginUSer('login')}
+                    >
+                        {loginUser}
+                    </button>
                 </ul>
             </div>
         </div>
