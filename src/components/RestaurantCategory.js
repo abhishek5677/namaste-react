@@ -1,9 +1,19 @@
+import React from "react";
+import { addItem } from "../utils/slices/cartSlice";
+import { useDispatch } from "react-redux";
 
 const RestaurantCategory = ({ data, setShowIndex, showItem }) => {
 
     const handleToggle = () => {
         setShowIndex()
     };
+
+    const dispatch = useDispatch();
+
+    const handleItem = (ele) => {
+        // dispatch an action
+        dispatch(addItem(ele))
+    }
 
     return (
         <div className="w-full max-w-4xl mx-auto mt-10 mb-10">
@@ -50,7 +60,7 @@ const RestaurantCategory = ({ data, setShowIndex, showItem }) => {
                                             <p>{ele?.card?.info?.description}</p>
                                         </div>
                                         <div className="w-[400px] relative">
-                                            <button className="py-1 px-3 absolute bg-black text-white right-10 rounded">
+                                            <button className="py-1 px-3 absolute bg-black text-white right-10 rounded" onClick={() => handleItem(ele)}>
                                                 Add +
                                             </button>
                                             <img

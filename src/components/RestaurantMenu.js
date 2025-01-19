@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Shimmer } from "./Shimmer";
-import { RESTAURANT_MENU_URL } from "../utils/constant";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
 
@@ -13,7 +12,6 @@ const RestaurantMenu = () => {
     const { id } = useParams();
 
     const resData = useRestaurantMenu(id)
-
 
     useEffect(() => {
         const filterItemData = resData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
